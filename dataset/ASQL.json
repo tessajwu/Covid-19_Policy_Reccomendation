@@ -1,0 +1,20 @@
+{
+	"name": "ASQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Challenge02LS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "dbo.Covid19_Metrics.parquet",
+				"fileSystem": "srcazuresqldb"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}

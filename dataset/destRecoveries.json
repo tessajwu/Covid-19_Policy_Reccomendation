@@ -1,0 +1,20 @@
+{
+	"name": "destRecoveries",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Challenge02LS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "destRecoveries",
+				"fileSystem": "operationaldatastore"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}

@@ -1,0 +1,7 @@
+{
+	"name": "sqlServerVM",
+	"properties": {
+		"type": "SelfHosted",
+		"description": "SHIR for VM SQL Server"
+	}
+}

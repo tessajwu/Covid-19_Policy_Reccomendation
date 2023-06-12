@@ -1,0 +1,215 @@
+{
+	"name": "AzureSqlTable2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "CMPLID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ODINO",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MFR_NAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MAKETXT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MODELTXT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "YEARTXT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CRASH",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FAILDATE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FIRE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INJURED",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEATHS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "COMPDESC",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CITY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "STATE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VIN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DATEA",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "LDATE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MILES",
+				"type": "nvarchar"
+			},
+			{
+				"name": "OCCURENCES",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CDESCR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CMPL_TYPE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "POLICE_RPT_YN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PURCH_DT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ORIG_OWNER_YN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ANTI_BRAKES_YN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CRUISE_CONT_YN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "NUM_CYLS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DRIVE_TRAIN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FUEL_SYS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FUEL_TYPE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TRANS_TYPE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VEH_SPEED",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DOT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TIRE_SIZE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LOC_OF_TIRE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TIRE_FAIL_TYPE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ORIG_EQUIP_YN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MANUF_DT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SEAT_TYPE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RESTRAINT_TYPE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEALER_NAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEALER_TEL",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEALER_CITY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEALER_STATE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEALER_ZIP",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PROD_TYPE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "REPAIRED_YN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MEDICAL_ATTN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VEHICLES_TOWED_YN",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "hw3"
+		}
+	}
+}

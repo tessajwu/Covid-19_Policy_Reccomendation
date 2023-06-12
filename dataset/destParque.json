@@ -1,0 +1,49 @@
+{
+	"name": "destParque",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Challenge02LS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "destPolicies",
+				"fileSystem": "operationaldatastore"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "ID",
+				"type": "INT32"
+			},
+			{
+				"name": "Updated",
+				"type": "DATE"
+			},
+			{
+				"name": "Deaths",
+				"type": "INT32"
+			},
+			{
+				"name": "ISO2",
+				"type": "UTF8"
+			},
+			{
+				"name": "ISO3",
+				"type": "UTF8"
+			},
+			{
+				"name": "Country_Region",
+				"type": "UTF8"
+			},
+			{
+				"name": "load_time",
+				"type": "INT96"
+			}
+		]
+	}
+}

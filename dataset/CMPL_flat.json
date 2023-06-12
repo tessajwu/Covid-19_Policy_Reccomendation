@@ -1,0 +1,25 @@
+{
+	"name": "CMPL_flat",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "CMPL_flat.txt",
+				"container": "ignore-this"
+			},
+			"columnDelimiter": "\t",
+			"compressionCodec": "ZipDeflate",
+			"compressionLevel": "Fastest",
+			"escapeChar": "\\",
+			"nullValue": "0",
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

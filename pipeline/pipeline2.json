@@ -1,0 +1,558 @@
+{
+	"name": "pipeline2",
+	"properties": {
+		"activities": [
+			{
+				"name": "send to sql database",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings",
+							"compressionProperties": {
+								"type": "ZipDeflateReadSettings"
+							}
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false
+					},
+					"enableStaging": false,
+					"enableSkipIncompatibleRow": true,
+					"validateDataConsistency": true,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 1
+								},
+								"sink": {
+									"name": "CMPLID",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 2
+								},
+								"sink": {
+									"name": "ODINO",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 3
+								},
+								"sink": {
+									"name": "MFR_NAME",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 4
+								},
+								"sink": {
+									"name": "MAKETXT",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 5
+								},
+								"sink": {
+									"name": "MODELTXT",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 6
+								},
+								"sink": {
+									"name": "YEARTXT",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 7
+								},
+								"sink": {
+									"name": "CRASH",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 8
+								},
+								"sink": {
+									"name": "FAILDATE",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 9
+								},
+								"sink": {
+									"name": "FIRE",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 10
+								},
+								"sink": {
+									"name": "INJURED",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 11
+								},
+								"sink": {
+									"name": "DEATHS",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 12
+								},
+								"sink": {
+									"name": "COMPDESC",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 13
+								},
+								"sink": {
+									"name": "CITY",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 14
+								},
+								"sink": {
+									"name": "STATE",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 15
+								},
+								"sink": {
+									"name": "VIN",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 16
+								},
+								"sink": {
+									"name": "DATEA",
+									"type": "DateTime",
+									"physicalType": "datetime"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 17
+								},
+								"sink": {
+									"name": "LDATE",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 18
+								},
+								"sink": {
+									"name": "MILES",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 19
+								},
+								"sink": {
+									"name": "OCCURENCES",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 20
+								},
+								"sink": {
+									"name": "CDESCR",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 21
+								},
+								"sink": {
+									"name": "CMPL_TYPE",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 22
+								},
+								"sink": {
+									"name": "POLICE_RPT_YN",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 23
+								},
+								"sink": {
+									"name": "PURCH_DT",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 24
+								},
+								"sink": {
+									"name": "ORIG_OWNER_YN",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 25
+								},
+								"sink": {
+									"name": "ANTI_BRAKES_YN",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 26
+								},
+								"sink": {
+									"name": "CRUISE_CONT_YN",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 27
+								},
+								"sink": {
+									"name": "NUM_CYLS",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 28
+								},
+								"sink": {
+									"name": "DRIVE_TRAIN",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 29
+								},
+								"sink": {
+									"name": "FUEL_SYS",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 30
+								},
+								"sink": {
+									"name": "FUEL_TYPE",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 31
+								},
+								"sink": {
+									"name": "TRANS_TYPE",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 32
+								},
+								"sink": {
+									"name": "VEH_SPEED",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 33
+								},
+								"sink": {
+									"name": "DOT",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 34
+								},
+								"sink": {
+									"name": "TIRE_SIZE",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 35
+								},
+								"sink": {
+									"name": "LOC_OF_TIRE",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 36
+								},
+								"sink": {
+									"name": "TIRE_FAIL_TYPE",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 37
+								},
+								"sink": {
+									"name": "ORIG_EQUIP_YN",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 38
+								},
+								"sink": {
+									"name": "MANUF_DT",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 39
+								},
+								"sink": {
+									"name": "SEAT_TYPE",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 40
+								},
+								"sink": {
+									"name": "RESTRAINT_TYPE",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 41
+								},
+								"sink": {
+									"name": "DEALER_NAME",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 42
+								},
+								"sink": {
+									"name": "DEALER_TEL",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 43
+								},
+								"sink": {
+									"name": "DEALER_CITY",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 44
+								},
+								"sink": {
+									"name": "DEALER_STATE",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 45
+								},
+								"sink": {
+									"name": "DEALER_ZIP",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 46
+								},
+								"sink": {
+									"name": "PROD_TYPE",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 47
+								},
+								"sink": {
+									"name": "REPAIRED_YN",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 48
+								},
+								"sink": {
+									"name": "MEDICAL_ATTN",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"ordinal": 49
+								},
+								"sink": {
+									"name": "VEHICLES_TOWED_YN",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false,
+							"dateTimeFormat": "yyyyMMdd"
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "CMPL_flat",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureSqlTable2",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}

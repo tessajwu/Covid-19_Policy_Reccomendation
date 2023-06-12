@@ -1,0 +1,15 @@
+{
+	"name": "DestinationDataset_svz",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"table": "FLAT_CMPL"
+		}
+	}
+}

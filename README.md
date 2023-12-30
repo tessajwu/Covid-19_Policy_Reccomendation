@@ -12,4 +12,4 @@ This project explores data of COVID-19 growth rates, death rates, and policies a
 4. Loaded data into Azure Synapse Analytics and Microsoft Power BI to conduct analysis, create visualizations, and make policy recommendations.
 
 **Architecture Overview**
-<img src="https://github.com/tessajwu/Covid-19_Policy_Reccomendation/blob/main/assets/images/covidprojectarchitecture.png" width="385px" align="center">
+<img src="https://github.com/tessajwu/Covid-19_Policy_Reccomendation/blob/main/assets/images/covidprojectarchitecture.png" width="500px" align="center">

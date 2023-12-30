@@ -11,5 +11,6 @@ This project explores data of COVID-19 growth rates, death rates, and policies a
 3. Merged all datasets by creating data pipelines to form a relational database warehouse in Azure Data Lake with fact tables (cases, deaths, recoveries, date, country), and dimension table (policies).
 4. Loaded data into Azure Synapse Analytics and Microsoft Power BI to conduct analysis, create visualizations, and make policy recommendations.
 
+**Architecture Overview**
+![](assets/images/covidprojectarchitecture.png | width=300)
 
-![alt text](assets/images/covidprojectarchitecture.png)
